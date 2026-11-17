@@ -41,3 +41,9 @@ The notebook provides molecular graph plots, label imbalance, molecule size dist
 ## Research limitations
 
 The dataset has a strong class imbalance. ROC-AUC is a ranking metric, not a claim of clinical effectiveness. For a rigorous follow-up, repeat each architecture across several random seeds and report mean and variability.
+
+## References
+
+Kipf, T. N., & Welling, M. (2017). Semi-Supervised Classification with Graph Convolutional Networks. International Conference on Learning Representations (ICLR).
+
+Paper: https://arxiv.org/abs/1609.02907
