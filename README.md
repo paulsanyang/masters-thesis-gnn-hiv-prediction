@@ -1,0 +1,43 @@
+# Predicting Molecule Efficiency Against HIV Using Graph Neural Networks
+
+**Master's Thesis — African Institute for Mathematical Sciences (AIMS)**
+**Paul Sanyang** 
+
+This repository contains the implementation and experimental analysis
+conducted as part of my Master's thesis in **Mathematical Sciences - Machine Learning**.
+
+
+This thesis studies graph neural networks for molecular activity classification on the [Open Graph Benchmark `ogbg-molhiv`](https://ogb.stanford.edu/docs/graphprop/#ogbg-mol) dataset (41,127 molecular graphs). Atoms are nodes and chemical bonds are edges.
+
+## Research question
+
+How does incorporating chemical bond information change graph convolution for molecular activity prediction?
+
+## Implemented architectures
+
+1. **Node-only GCN (baseline):** symmetric degree-normalized adjacency and atom features.
+2. **Additive edge-aware GCN (thesis-inspired):** adds learned bond embeddings to messages from neighboring atoms.
+3. **Edge-weighted GCN (new extension):** learns a scalar weight from bond embeddings and uses it to modify graph adjacency before normalization.
+
+## Run the notebook
+
+1. Install dependencies into the Jupyter kernel environment:
+
+   ```bash
+   python -m pip install torch torch-geometric ogb rdkit numpy pandas matplotlib networkx scikit-learn tqdm
+   ```
+
+2. Open `masters_thesis_aims_mol-hiv_paul.ipynb` and run cells in order. The dataset is downloaded automatically on first use.
+3. Use `EPOCHS = 2` to test the pipeline. For a longer comparison, change to `EPOCHS = 120`.
+4. The default `DEVICE_PREFERENCE = 'cpu'` works on most machines. Apple Silicon users can try `'mps'` if their installed PyG operations support it.
+5. Select models based on **validation** ROC-AUC. Set `RUN_FINAL_TEST = True` only after model selection is finalized.
+
+**Notes:** The notebook uses dense adjacency tensors, which can be memory-intensive. PyTorch 2.6+ may require trusted OGB processed-object loading; the notebook uses a temporary compatibility override for trusted official dataset files.
+
+## Evaluation and visualizations
+
+The notebook provides molecular graph plots, label imbalance, molecule size distributions, adjacency matrices, per-model loss curves, validation, and ROC-AUC curves.
+
+## Research limitations
+
+The dataset has a strong class imbalance. ROC-AUC is a ranking metric, not a claim of clinical effectiveness. For a rigorous follow-up, repeat each architecture across several random seeds and report mean and variability.
