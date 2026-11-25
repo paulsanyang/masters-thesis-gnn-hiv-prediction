@@ -1,7 +1,17 @@
+.DS_Store
 .ipynb_checkpoints/
 __pycache__/
-.DS_Store
-.Rhistory
+*.pyc
+.venv/
+original_execution_logs.txt
+outputs/
+runs/
+
+# Local datasets and trained models
 data/
-*.pt
-*.pth
+checkpoints/
+.ipynb_checkpoints/
+
+.Rhistory
+
+.Rhistory
