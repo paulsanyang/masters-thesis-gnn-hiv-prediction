@@ -45,10 +45,10 @@ The dataset has a strong class imbalance. ROC-AUC is a ranking metric, not a cla
 ## References
 
 Kipf, T. N., & Welling, M. (2017). Semi-Supervised Classification with Graph Convolutional Networks. International Conference on Learning Representations (ICLR).
-
 Paper: https://arxiv.org/abs/1609.02907
-Paper: Kipf, T. N., & Welling, M. (2016). Variational Graph Auto-Encoders. Bayesian Deep Learning Workshop, Neural Information Processing Systems (NIPS). https://arxiv.org/abs/1611.07308
+
+ Kipf, T. N., & Welling, M. (2016). Variational Graph Auto-Encoders. Bayesian Deep Learning Workshop, Neural Information Processing Systems (NIPS). 
+ Paper: https://arxiv.org/abs/1611.07308
 
 Hu, W., Fey, M., Zitnik, M., Dong, Y., Ren, H., Liu, B., Catasta, M., & Leskovec, J. (2020). Open Graph Benchmark: Datasets for Machine Learning on Graphs. Advances in Neural Information Processing Systems, 33 (NeurIPS 2020).
-
-Paper: https://proceedings.neurips.cc/paper_files/paper/2020/hash/fb60d411a5c5b72b2e7d3527cfc84fd0-Abstract.html
+link: https://proceedings.neurips.cc/paper_files/paper/2020/hash/fb60d411a5c5b72b2e7d3527cfc84fd0-Abstract.html
