@@ -3,7 +3,7 @@
 **Master's Thesis — African Institute for Mathematical Sciences (AIMS)**
 **Paul Sanyang** 
 
-This repository contains includes selected portions of the code developed during my master's thesis and experimental analysis
+This repository contains selected portions of the code developed during my master's thesis and experimental analysis
 conducted as part of my Master's thesis in **Mathematical Sciences - Machine Learning**.
 
 
